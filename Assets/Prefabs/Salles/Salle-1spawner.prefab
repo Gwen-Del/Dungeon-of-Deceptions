@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7025197870853100235}
   m_Layer: 0
-  m_Name: Salle 1
+  m_Name: Salle-1spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
