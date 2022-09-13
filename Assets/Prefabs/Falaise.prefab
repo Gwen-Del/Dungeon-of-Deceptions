@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f6a408ae84b144a952ebb6e481177d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnBasePrefab: {fileID: 1589542209840613939, guid: 79081dc919ddde2448668e8b85ba6845, type: 3}
+  playerPrefab: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
+  basicWallPrefab: {fileID: 5677581348300739731, guid: 43330fe9aa141014e8c127203a687483, type: 3}
 --- !u!1 &1251635160278397803
 GameObject:
   m_ObjectHideFlags: 0
