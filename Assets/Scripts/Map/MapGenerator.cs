@@ -16,6 +16,7 @@ public class MapGenerator : MonoBehaviour
         public GameObject room;
         [Range(1,100)]
         public int PartSpawn = 10;
+        public int maxCount = 100;
     }
 
     public GameObject player;
@@ -32,10 +33,6 @@ public class MapGenerator : MonoBehaviour
 
     void Start()
     {
-        for(int i=0;i<rooms.Length;i++)
-        {
-            maxPercent += rooms[i].PartSpawn;
-        }
         MazeGenerator();
     }
 
@@ -59,15 +56,29 @@ public class MapGenerator : MonoBehaviour
                     }
                     else
                     {
+                        maxPercent = 0;
+                        for(int k=0;k<rooms.Length;k++)
+                        {
+                            if(rooms[k].maxCount > 0)
+                            {
+                                maxPercent += rooms[k].PartSpawn;
+                            }
+                        }
                         GameObject selectedRoom = rooms[0].room;
                         int roomSelector = Random.Range(0,maxPercent);
                         int iter = 0;
-                        while(roomSelector > 0)
+                        while(roomSelector >= 0)
                         {
-                            selectedRoom = rooms[iter].room;
-                            roomSelector -= rooms[iter].PartSpawn;
+                            if(rooms[iter].maxCount > 0)
+                            {
+                                roomSelector -= rooms[iter].PartSpawn;
+                            }
                             iter++;
                         }
+
+                        selectedRoom = rooms[iter-1].room;
+
+                        rooms[iter-1].maxCount--;
 
                         var newRoom = Instantiate(selectedRoom, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomParameter>();
                         newRoom.UpdateRoom(currentCell.status);
