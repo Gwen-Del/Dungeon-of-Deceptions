@@ -5,14 +5,14 @@ using UnityEngine;
 public class RoomParameter : MonoBehaviour
 {
     public GameObject[] walls;
-    public bool[] teststatus;
+    public bool[] status;
 
     void Start()
     {
-        UpdateRoom(teststatus);
+        UpdateRoom(status);
     }
 
-    void UpdateRoom(bool[] status)
+    public void UpdateRoom(bool[] status)
     {
         for (int i= 0; i < status.Length; i ++)
         {

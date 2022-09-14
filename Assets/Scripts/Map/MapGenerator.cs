@@ -14,38 +14,28 @@ public class MapGenerator : MonoBehaviour
     public class Rule
     {
         public GameObject room;
-        public GameObject[] SpawnerRoom;
-        public GameObject[] LootRoom;
-        public GameObject[] FinaleRoom;
-        public Vector2Int minPosition;
-        public Vector2Int maxPosition;
-
-        public bool obligatory;
-
-        public int ProbabilityOfSpawning(int x, int y)
-        {
-            // 0 - cannot spawn 1 - can spawn 2 - HAS to spawn
-
-            if (x>= minPosition.x && x<=maxPosition.x && y >= minPosition.y && y <= maxPosition.y)
-            {
-                return obligatory ? 2 : 1;
-            }
-
-            return 0;
-        }
-
+        [Range(1,100)]
+        public int PartSpawn = 10;
     }
 
+    public GameObject player;
     public Vector2Int size;
     public int startPos = 0;
+    public GameObject Base;
     public Rule[] rooms;
     public Vector2 offset;
 
+    bool firstRoom = true;
+    int maxPercent = 0;
+
     List<Cell> board;
 
-    // Start is called before the first frame update
     void Start()
     {
+        for(int i=0;i<rooms.Length;i++)
+        {
+            maxPercent += rooms[i].PartSpawn;
+        }
         MazeGenerator();
     }
 
@@ -59,39 +49,30 @@ public class MapGenerator : MonoBehaviour
                 Cell currentCell = board[(i + j * size.x)];
                 if (currentCell.visited)
                 {
-                    int randomRoom = -1;
-                    List<int> availableRooms = new List<int>();
-
-                    for (int k = 0; k < rooms.Length; k++)
+                    if(firstRoom)
                     {
-                        int p = rooms[k].ProbabilityOfSpawning(i, j);
-
-                        if(p == 2)
-                        {
-                            randomRoom = k;
-                            break;
-                        } else if (p == 1)
-                        {
-                            availableRooms.Add(k);
-                        }
+                        var newRoom = Instantiate(Base, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomParameter>();
+                        newRoom.UpdateRoom(currentCell.status);
+                        newRoom.name += " " + i + "-" + j;
+                        Instantiate(player, new Vector3(i * offset.x, 1, -j * offset.y), Quaternion.identity);
+                        firstRoom = false;
                     }
-
-                    if(randomRoom == -1)
+                    else
                     {
-                        if (availableRooms.Count > 0)
+                        GameObject selectedRoom = rooms[0].room;
+                        int roomSelector = Random.Range(0,maxPercent);
+                        int iter = 0;
+                        while(roomSelector > 0)
                         {
-                            randomRoom = availableRooms[Random.Range(0, availableRooms.Count)];
+                            selectedRoom = rooms[iter].room;
+                            roomSelector -= rooms[iter].PartSpawn;
+                            iter++;
                         }
-                        else
-                        {
-                            randomRoom = 0;
-                        }
+
+                        var newRoom = Instantiate(selectedRoom, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomParameter>();
+                        newRoom.UpdateRoom(currentCell.status);
+                        newRoom.name += " " + i + "-" + j;
                     }
-
-
-                    var newRoom = Instantiate(rooms[randomRoom].room, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
-                    newRoom.UpdateRoom(currentCell.status);
-                    newRoom.name += " " + i + "-" + j;
 
                 }
             }

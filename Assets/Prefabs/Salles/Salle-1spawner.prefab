@@ -934,8 +934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walls:
   - {fileID: 8263370360790186523}
-  - {fileID: 3109604283683726811}
   - {fileID: 2882223335240066889}
+  - {fileID: 3109604283683726811}
   - {fileID: 1755902236886029195}
   teststatus: 00000000
 --- !u!1001 &2509174771132778026
@@ -955,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754483490929221304, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 754483490929221304, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_LocalPosition.z

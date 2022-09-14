@@ -71,8 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walls:
   - {fileID: 7405355634167361630}
-  - {fileID: 4192672235143938603}
   - {fileID: 2107793379983348965}
+  - {fileID: 4192672235143938603}
   - {fileID: 3096540635790449738}
   teststatus: 00000000
 --- !u!1 &1737508130750248289

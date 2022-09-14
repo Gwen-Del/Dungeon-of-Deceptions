@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279441866377216819}
-  - component: {fileID: 6041134424089781967}
+  - component: {fileID: 4681479163466647477}
   m_Layer: 0
   m_Name: Monde
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6041134424089781967
+--- !u!114 &4681479163466647477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,3 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f6a408ae84b144a952ebb6e481177d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
+  size: {x: 0, y: 0}
+  startPos: 0
+  Base: {fileID: 1589542209840613939, guid: 79081dc919ddde2448668e8b85ba6845, type: 3}
+  rooms:
+  - room: {fileID: 6805466947670606272, guid: bd65b25ab8cd88945aaa39d6e4ceba74, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 0
+  - room: {fileID: 605199605704515460, guid: 1b99569290c56634983772c0fad806d4, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 0
+  - room: {fileID: 7929107978166446569, guid: beb77a33f8c103a42a9b88b2eab2fc33, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 0
+  - room: {fileID: 1589542209840613939, guid: 88c05a55d23d71e49ac63605cac5a9b6, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 0
+  offset: {x: 0, y: 0}

@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walls:
   - {fileID: 5179520955673364403}
-  - {fileID: 9125569924673097973}
   - {fileID: 8683065816151635923}
+  - {fileID: 9125569924673097973}
   - {fileID: 5771724438329979782}
   teststatus: 00000000
 --- !u!1 &7498348172704203803
@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7498348172704203803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.33, z: -2.97}
+  m_LocalPosition: {x: 0, y: 3.33, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -205,9 +205,9 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 1
-  m_WindTurbulence: 1
-  m_WindPulseMagnitude: 0.5
+  m_WindMain: 0.1
+  m_WindTurbulence: 0.1
+  m_WindPulseMagnitude: 0.37
   m_WindPulseFrequency: 0.01
 --- !u!1001 &456986193805948788
 PrefabInstance:
