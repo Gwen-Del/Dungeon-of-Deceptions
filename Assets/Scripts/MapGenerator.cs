@@ -26,7 +26,7 @@ public class MapGenerator : MonoBehaviour
         int BaseX = Random.Range(-4,5);
         int BaseZ = Random.Range(-4,5);
 
-        maps[BaseX+4,BaseZ+4] = Instantiate(spawnBasePrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
+        maps[BaseX+4][BaseZ+4] = Instantiate(spawnBasePrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
         GameObject player = Instantiate(playerPrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
 
         if(BaseX == -4)
