@@ -49,10 +49,14 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 60
 =======
   controlID: 20
 >>>>>>> menus
+=======
+  controlID: 20
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,10 +233,14 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 61
 =======
   controlID: 21
 >>>>>>> menus
+=======
+  controlID: 21
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -258,10 +266,14 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 62
 =======
   controlID: 22
 >>>>>>> menus
+=======
+  controlID: 22
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -359,36 +371,52 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Prefabs
 =======
     - Assets/Textures
 >>>>>>> menus
+=======
+    - Assets/Textures
+    - Assets/Prefabs
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Prefabs
 =======
   - Assets/Textures
 >>>>>>> menus
+=======
+  - Assets/Textures
+  - Assets/Prefabs
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\nonop\Documents\fac\semestre_9\IEVA\Dungeon-of-Deceptions
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 4c5b0000
     m_LastClickedID: 23372
     m_ExpandedIDs: 00000000445b000000ca9a3b
 =======
+=======
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
     scrollPos: {x: 0, y: 165.40002}
     m_SelectedIDs: b85a0000
     m_LastClickedID: 23224
     m_ExpandedIDs: 00000000905a0000925a0000945a00009c5a000000ca9a3b
+<<<<<<< HEAD
 >>>>>>> menus
+=======
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,10 +445,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000445b0000
 =======
     m_ExpandedIDs: 00000000905a0000925a0000945a0000
 >>>>>>> menus
+=======
+    m_ExpandedIDs: 00000000905a0000925a0000945a0000
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -549,6 +581,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 36fbffff
       m_LastClickedID: -1226
       m_ExpandedIDs: 36fbffff38fbffff
@@ -557,6 +590,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 1cf8ffff38fbffff
 >>>>>>> menus
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1cf8ffff38fbffff
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -806,6 +844,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 9.934973, y: -27.444086, z: -28.932278}
     speed: 2
     m_Value: {x: 9.934973, y: -27.444086, z: -28.932278}
@@ -814,6 +853,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 457.29, y: 119.94327, z: 2350.707}
 >>>>>>> menus
+=======
+    m_Target: {x: 457.29, y: 119.94327, z: 2350.707}
+    speed: 2
+    m_Value: {x: 457.29, y: 119.94327, z: 2350.707}
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -861,6 +905,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0.345277, y: 0.0649551, z: -0.02397093, w: 0.93596756}
     speed: 2
     m_Value: {x: 0.3452692, y: 0.06495363, z: -0.023970388, w: 0.93594635}
@@ -869,6 +914,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 82.689186
 =======
+=======
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
     m_Target: {x: 0.039297722, y: 0.0074897073, z: -0.0002940691, w: 0.999217}
     speed: 2
     m_Value: {x: 0.04229393, y: 0.008987267, z: -0.00037997446, w: 0.9990647}
@@ -876,7 +923,10 @@ MonoBehaviour:
     m_Target: 1640.8951
     speed: 2
     m_Value: 1718.2148
+<<<<<<< HEAD
 >>>>>>> menus
+=======
+>>>>>>> 653c363f5f13d5598a7334dd523372f0684c7f74
   m_Ortho:
     m_Target: 0
     speed: 2
