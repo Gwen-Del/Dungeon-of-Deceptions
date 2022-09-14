@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
+    public GameObject playerObject;
     Transform player;
 
     [Range(0.0f,100.0f)]
@@ -13,7 +14,7 @@ public class EnnemyMovement : MonoBehaviour
     
     void Start()
     {
-        player = GameObject.Find("Player").transform;
+        player = playerObject.transform;
     }
 
     void Update()
@@ -32,6 +33,7 @@ public class EnnemyMovement : MonoBehaviour
             if(Physics.Linecast(transform.position, player.position, out hit)){
                 if(hit.transform.tag == "Player"){
                     Debug.DrawLine(transform.position, player.position, Color.red);
+                    Debug.Log("visible");
                     //c'est ici qu'il le voit
                     return true;
                 }

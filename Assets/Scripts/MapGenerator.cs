@@ -7,6 +7,7 @@ public class MapGenerator : MonoBehaviour
     public GameObject spawnBasePrefab;
     public GameObject playerPrefab;
     public GameObject basicWallPrefab;
+    public GameObject[] prefabs;
 
     void Start()
     {
@@ -31,6 +32,20 @@ public class MapGenerator : MonoBehaviour
         else if(BaseZ == 5)
         {
             Instantiate(basicWallPrefab, new Vector3(BaseX*20-10,2,BaseZ*20), Quaternion.identity);
+        }
+
+        if(prefabs.Length-1 >= 0)
+        {
+            int SalleX = Random.Range(-4,5);
+            int SalleZ = Random.Range(-4,5);
+
+            while(SalleX == BaseX && SalleZ == BaseZ)
+            {
+                SalleX = Random.Range(-4,5);
+                SalleZ = Random.Range(-4,5);
+            }
+
+            Instantiate(prefabs[Random.Range(0,prefabs.Length)], new Vector3(SalleX*20-10,0,SalleZ*20-10), Quaternion.identity);
         }
     }
 

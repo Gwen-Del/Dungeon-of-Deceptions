@@ -201,10 +201,10 @@ GameObject:
   - component: {fileID: 5164350731385827045}
   - component: {fileID: 5164350731385827046}
   - component: {fileID: 5164350731385827047}
-  - component: {fileID: 635437800967678589}
+  - component: {fileID: 6568344317469142263}
   - component: {fileID: -2667559820396187083}
   m_Layer: 0
-  m_Name: Ennemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,7 +289,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &635437800967678589
+--- !u!114 &6568344317469142263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149bd599ad18ba3438d0fd903a6f639f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
   range: 30
 --- !u!195 &-2667559820396187083
 NavMeshAgent:

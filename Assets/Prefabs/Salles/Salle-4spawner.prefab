@@ -969,6 +969,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5267564576457413343, guid: da06671fc59d6f9449f12f8574288485, type: 3}
+      propertyPath: spawnObject
+      value: 
+      objectReference: {fileID: 5164350731385827065, guid: b5c6adf4880d28a44a9e2fc9690084ff, type: 3}
     - target: {fileID: 7184160164452999254, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_Name
       value: EnnemySpawner
@@ -1031,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5267564576457413343, guid: da06671fc59d6f9449f12f8574288485, type: 3}
+      propertyPath: spawnObject
+      value: 
+      objectReference: {fileID: 5164350731385827065, guid: b5c6adf4880d28a44a9e2fc9690084ff, type: 3}
     - target: {fileID: 7184160164452999254, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_Name
       value: EnnemySpawner (3)
@@ -1093,6 +1101,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5267564576457413343, guid: da06671fc59d6f9449f12f8574288485, type: 3}
+      propertyPath: spawnObject
+      value: 
+      objectReference: {fileID: 5164350731385827065, guid: b5c6adf4880d28a44a9e2fc9690084ff, type: 3}
     - target: {fileID: 7184160164452999254, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_Name
       value: EnnemySpawner (2)
@@ -1155,6 +1167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5267564576457413343, guid: da06671fc59d6f9449f12f8574288485, type: 3}
+      propertyPath: spawnObject
+      value: 
+      objectReference: {fileID: 5164350731385827065, guid: b5c6adf4880d28a44a9e2fc9690084ff, type: 3}
     - target: {fileID: 7184160164452999254, guid: da06671fc59d6f9449f12f8574288485, type: 3}
       propertyPath: m_Name
       value: EnnemySpawner (1)
