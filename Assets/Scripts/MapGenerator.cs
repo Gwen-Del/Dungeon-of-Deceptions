@@ -19,12 +19,14 @@ public class MapGenerator : MonoBehaviour
     [Range(1,20)]
     public int nbSalleMin = 5;
 
+    GameObject[][] maps = new GameObject[10][10];
+
     void Start()
     {
         int BaseX = Random.Range(-4,5);
         int BaseZ = Random.Range(-4,5);
 
-        Instantiate(spawnBasePrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
+        maps[BaseX+4,BaseZ+4] = Instantiate(spawnBasePrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
         GameObject player = Instantiate(playerPrefab, new Vector3(BaseX*20-10,0,BaseZ*20-10), Quaternion.identity);
 
         if(BaseX == -4)
