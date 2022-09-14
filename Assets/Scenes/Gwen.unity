@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: spawnBasePrefab
       value: 
       objectReference: {fileID: 1589542209840613939, guid: 79081dc919ddde2448668e8b85ba6845, type: 3}
+    - target: {fileID: 7288518406887500776, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
 --- !u!1 &705507993

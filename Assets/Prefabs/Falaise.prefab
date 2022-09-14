@@ -114,9 +114,16 @@ MonoBehaviour:
   spawnBasePrefab: {fileID: 1589542209840613939, guid: 79081dc919ddde2448668e8b85ba6845, type: 3}
   playerPrefab: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
   basicWallPrefab: {fileID: 5677581348300739731, guid: 43330fe9aa141014e8c127203a687483, type: 3}
-  prefabs:
-  - {fileID: 1589542209840613939, guid: beb77a33f8c103a42a9b88b2eab2fc33, type: 3}
+  prefabsMaze:
+  - {fileID: 605199605704515460, guid: 1b99569290c56634983772c0fad806d4, type: 3}
+  percentSpanwer: 30
+  prefabsSpawner:
+  - {fileID: 7929107978166446569, guid: beb77a33f8c103a42a9b88b2eab2fc33, type: 3}
   - {fileID: 1589542209840613939, guid: 88c05a55d23d71e49ac63605cac5a9b6, type: 3}
+  percentLoot: 30
+  prefabsLoot:
+  - {fileID: 6805466947670606272, guid: bd65b25ab8cd88945aaa39d6e4ceba74, type: 3}
+  nbSalleMin: 10
 --- !u!1 &1251635160278397803
 GameObject:
   m_ObjectHideFlags: 0

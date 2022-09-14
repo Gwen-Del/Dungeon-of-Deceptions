@@ -7,7 +7,17 @@ public class MapGenerator : MonoBehaviour
     public GameObject spawnBasePrefab;
     public GameObject playerPrefab;
     public GameObject basicWallPrefab;
-    public GameObject[] prefabs;
+
+    public GameObject[] prefabsMaze;
+    [Range(0,30)]
+    public int percentSpanwer = 30;
+    public GameObject[] prefabsSpawner;
+    [Range(0,30)]
+    public int percentLoot = 30;
+    public GameObject[] prefabsLoot;
+
+    [Range(1,20)]
+    public int nbSalleMin = 5;
 
     void Start()
     {
@@ -34,7 +44,7 @@ public class MapGenerator : MonoBehaviour
             Instantiate(basicWallPrefab, new Vector3(BaseX*20-10,2,BaseZ*20), Quaternion.identity);
         }
 
-        if(prefabs.Length-1 >= 0)
+        if(prefabsSpawner.Length-1 >= 0)
         {
             int SalleX = Random.Range(-4,5);
             int SalleZ = Random.Range(-4,5);
@@ -45,7 +55,7 @@ public class MapGenerator : MonoBehaviour
                 SalleZ = Random.Range(-4,5);
             }
 
-            Instantiate(prefabs[Random.Range(0,prefabs.Length)], new Vector3(SalleX*20-10,0,SalleZ*20-10), Quaternion.identity);
+            Instantiate(prefabsSpawner[Random.Range(0,prefabsSpawner.Length)], new Vector3(SalleX*20-10,0,SalleZ*20-10), Quaternion.identity);
         }
     }
 
