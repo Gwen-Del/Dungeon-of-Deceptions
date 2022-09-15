@@ -30,7 +30,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.Find("Player").transform;
+        Player = GameObject.FindWithTag("Player").transform;
     }
 
     
@@ -90,14 +90,13 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
 /*----------------------------Attacking--------------------------------------*/
     public void Attacking()
-    {
-        Debug.Log("attack");  
+    { 
+        Debug.Log("attack"); 
     }
 
 /*----------------------------Patroling--------------------------------------*/
     public void Patroling()
     {
-        Debug.Log("patroling");
         if(!SetWalkPoint) SearchWalkPoint();
         else {
             transform.position = Vector3.MoveTowards(transform.position, walkPoint, 0.5f * Speed * Time.deltaTime);
@@ -118,5 +117,13 @@ public class EnemyBehaviorV2 : MonoBehaviour
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         SetWalkPoint = true;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, AttackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, SightRange);
     }
 }
