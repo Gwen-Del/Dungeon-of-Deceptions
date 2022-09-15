@@ -188,11 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: offset.x
@@ -232,19 +232,19 @@ PrefabInstance:
       objectReference: {fileID: 1589542209840613939, guid: 88c05a55d23d71e49ac63605cac5a9b6, type: 3}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: rooms.Array.data[0].maxCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
-      propertyPath: rooms.Array.data[1].maxCount
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
-      propertyPath: rooms.Array.data[2].maxCount
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[1].maxCount
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[2].maxCount
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: rooms.Array.data[3].maxCount
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: rooms.Array.data[4].maxCount
@@ -367,8 +367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040080275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 500, y: -1, z: -500}
+  m_LocalScale: {x: 200, y: 1, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
