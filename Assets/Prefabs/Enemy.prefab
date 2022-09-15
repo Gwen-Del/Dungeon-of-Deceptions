@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 5164350731385827045}
   - component: {fileID: 5164350731385827046}
   - component: {fileID: 5164350731385827047}
-  - component: {fileID: 6568344317469142263}
+  - component: {fileID: -1201851268802394960}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -283,12 +283,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5164350731385827065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6568344317469142263
+--- !u!114 &-1201851268802394960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,11 +297,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 5164350731385827065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149bd599ad18ba3438d0fd903a6f639f, type: 3}
+  m_Script: {fileID: 11500000, guid: b13c23d11793af54ca2b9d6b55e8190f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
+  Player: {fileID: 0}
+  Speed: 1.5
+  Distance: 0
+  CloseDistance: 1
+  DistanceToWalkPoint: 0
+  SightRange: 20
+  AttackRange: 3
+  InSightRange: 0
+  InDistanceRange: 0
+  InAttackRange: 0
   range: 30
+  health: 10
+  walkPointRange: 10
 --- !u!1 &5234865140269310754
 GameObject:
   m_ObjectHideFlags: 0

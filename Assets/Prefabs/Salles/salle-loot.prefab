@@ -162,7 +162,7 @@ MonoBehaviour:
   - {fileID: 8683065816151635923}
   - {fileID: 9125569924673097973}
   - {fileID: 5771724438329979782}
-  teststatus: 00000000
+  status: 
 --- !u!1 &7498348172704203803
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: -3048681423937545983, guid: 453a814c0058e684eab243f57ebdeab1, type: 3}
     - target: {fileID: 5048187478714796381, guid: 453a814c0058e684eab243f57ebdeab1, type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453a814c0058e684eab243f57ebdeab1, type: 3}

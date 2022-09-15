@@ -282,11 +282,11 @@ PrefabInstance:
       objectReference: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: offset.x
@@ -321,8 +321,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1589542209840613939, guid: 88c05a55d23d71e49ac63605cac5a9b6, type: 3}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[4].room
+      value: 
+      objectReference: {fileID: 1589542209840613939, guid: 88c05a55d23d71e49ac63605cac5a9b6, type: 3}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: rooms.Array.data[0].maxCount
-      value: 1
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[1].maxCount
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[2].maxCount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[3].maxCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[4].maxCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[1].PartSpawn
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[2].PartSpawn
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[3].PartSpawn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: rooms.Array.data[4].PartSpawn
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: rooms.Array.data[0].obligatory
