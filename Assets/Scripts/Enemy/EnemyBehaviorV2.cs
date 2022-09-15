@@ -21,16 +21,16 @@ public class EnemyBehaviorV2 : MonoBehaviour
     RaycastHit hit;
 
     // enemy's stat
-    public float health = 10;
+    public float health;
 
     // patroling
-    Vector3 walkPoint;
-    bool SetWalkPoint;
-    public float walkPointRange = 10;
+    public Vector3 walkPoint;
+    public bool SetWalkPoint;
+    public float walkPointRange;
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player").transform;
+        Player = GameObject.Find("Player").transform;
     }
 
     
@@ -78,6 +78,9 @@ public class EnemyBehaviorV2 : MonoBehaviour
         Distance = Vector3.Distance(Player.transform.position, transform.position);
     }
 
+
+/*----------------------------Chasing--------------------------------------*/
+
     public void Chasing()
     {
         Debug.Log("Chasing");
@@ -85,9 +88,10 @@ public class EnemyBehaviorV2 : MonoBehaviour
         transform.forward = Player.transform.position - transform.position;
     }
 
+/*----------------------------Attacking--------------------------------------*/
     public void Attacking()
     {
-        Debug.Log("attack");
+        Debug.Log("attack");  
     }
 
 /*----------------------------Patroling--------------------------------------*/
