@@ -78,7 +78,9 @@ public class EnemyBehaviorV2 : MonoBehaviour
         Distance = Vector3.Distance(Player.transform.position, transform.position);
     }
 
+
 /*----------------------------Chasing--------------------------------------*/
+
     public void Chasing()
     {
         Debug.Log("Chasing");
