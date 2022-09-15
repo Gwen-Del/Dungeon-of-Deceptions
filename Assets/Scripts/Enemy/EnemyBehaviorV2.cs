@@ -78,6 +78,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
         Distance = Vector3.Distance(Player.transform.position, transform.position);
     }
 
+/*----------------------------Chasing--------------------------------------*/
     public void Chasing()
     {
         Debug.Log("Chasing");
@@ -85,9 +86,10 @@ public class EnemyBehaviorV2 : MonoBehaviour
         transform.forward = Player.transform.position - transform.position;
     }
 
+/*----------------------------Attacking--------------------------------------*/
     public void Attacking()
     {
-        Debug.Log("attack");
+        Debug.Log("attack");  
     }
 
 /*----------------------------Patroling--------------------------------------*/
