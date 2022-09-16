@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBehaviorV2 : MonoBehaviour
 {
 
     public Transform Player;
+    public Image HealthBar;
+    public GameObject Bullet;
 
     // 
     public float Speed = 1.5f;
@@ -21,12 +24,17 @@ public class EnemyBehaviorV2 : MonoBehaviour
     RaycastHit hit;
 
     // enemy's stat
-    public float health;
+    private const float MAX_HEALTH = 10f;
+    public float health = MAX_HEALTH;
 
     // patroling
     public Vector3 walkPoint;
     public bool SetWalkPoint;
     public float walkPointRange;
+
+    // attacking
+    public bool AlreadyAttacked;
+    public float TimeBetweenAttack;
 
     void Start()
     {
@@ -38,6 +46,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
     {
         IsVisible();
         GetDistance();
+        UpdateHealth();
 
         InDistanceRange = (Distance < SightRange) && (Distance > AttackRange);
         InAttackRange = (Distance < AttackRange) && (Distance > CloseDistance);
@@ -83,15 +92,29 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
     public void Chasing()
     {
-        Debug.Log("Chasing");
-        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, 1.5f * Speed * Time.deltaTime);
         transform.forward = Player.transform.position - transform.position;
     }
 
 /*----------------------------Attacking--------------------------------------*/
     public void Attacking()
     { 
-        Debug.Log("attack"); 
+        transform.LookAt(Player);
+
+        if(!AlreadyAttacked){
+
+            Rigidbody rb = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+
+            AlreadyAttacked = true;
+            Invoke(nameof(ResetAttack), TimeBetweenAttack);
+        }
+    }
+
+    public void ResetAttack()
+    {
+        AlreadyAttacked = false;
     }
 
 /*----------------------------Patroling--------------------------------------*/
@@ -119,11 +142,20 @@ public class EnemyBehaviorV2 : MonoBehaviour
         SetWalkPoint = true;
     }
 
-    private void OnDrawGizmosSelected()
+/*----------------------------Health--------------------------------------*/
+    public void UpdateHealth()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, AttackRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, SightRange);
+        HealthBar.fillAmount = health / MAX_HEALTH;
+
+        // they died
+        if(health < 0) Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("bulletPlayer")){
+            health -= 5f;
+            // Destroy(other.GetComponent<GameObject>());
+        }
     }
 }
