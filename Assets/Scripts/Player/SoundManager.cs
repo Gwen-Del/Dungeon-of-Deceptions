@@ -23,8 +23,7 @@ public class SoundManager : MonoBehaviour
                 {
                     if(sounds[iter][0].GetComponent<AudioSource>().clip == ads.clip)
                     {
-                        go.GetComponent<AudioSource>().enabled = true;
-                        go.SetActive(false);
+                        go.GetComponent<AudioSource>().enabled = false;
                         sounds[iter].Add(go);
                         find = true;
                     }
@@ -35,7 +34,6 @@ public class SoundManager : MonoBehaviour
                 {
                     sounds.Add(new List<GameObject>());
                     go.GetComponent<AudioSource>().enabled = true;
-                    go.SetActive(true);
                     go.GetComponent<AudioSource>().Play();
                     sounds[iter].Add(go);
                     activeSounds.Add(go);
@@ -69,8 +67,7 @@ public class SoundManager : MonoBehaviour
                         {
                             if(goRep != go)
                             {
-                                goRep.SetActive(false);
-                                go.SetActive(true);
+                                goRep.GetComponent<AudioSource>().enabled = false;
                                 go.GetComponent<AudioSource>().enabled = true;
                                 go.GetComponent<AudioSource>().Play();
                                 activeSounds[iter] = go;
