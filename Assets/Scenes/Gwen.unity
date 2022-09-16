@@ -188,11 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 7241917542999358712, guid: d00ac91d11ca2174c881f13ab30baac6, type: 3}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.x
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: size.y
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4681479163466647477, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
       propertyPath: offset.x
@@ -274,8 +274,30 @@ PrefabInstance:
       propertyPath: rooms.Array.data[1].obligatory
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6101462328459210178, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+--- !u!1 &1522589776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6101462328459210178, guid: f76bb63439bdb134a8eb2f50863df111, type: 3}
+  m_PrefabInstance: {fileID: 1522589775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1522589777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522589776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbdea747a59e544cbd2958af52b474e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nbEnemies: 0
 --- !u!1 &2040080275
 GameObject:
   m_ObjectHideFlags: 0

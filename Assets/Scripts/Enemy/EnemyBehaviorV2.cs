@@ -102,7 +102,6 @@ public class EnemyBehaviorV2 : MonoBehaviour
         transform.LookAt(Player);
 
         if(!AlreadyAttacked){
-
             Rigidbody rb = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
