@@ -38,15 +38,17 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
     void Start()
     {
+        // searching the player
         Player = GameObject.FindWithTag("Player").transform;
     }
 
     
     void Update()
     {
-        IsVisible();
-        GetDistance();
-        UpdateHealth();
+        IsVisible(); //check if the player is visible
+        GetDistance(); //check the distance between the player and an enemy
+        UpdateHealth(); //check the health
+
 
         InDistanceRange = (Distance < SightRange) && (Distance > AttackRange);
         InAttackRange = (Distance < AttackRange) && (Distance > CloseDistance);
@@ -67,8 +69,8 @@ public class EnemyBehaviorV2 : MonoBehaviour
             if(Physics.Linecast(transform.position, Player.position, out hit)){
                 if(hit.transform.tag == "Player"){
                     Debug.DrawLine(transform.position, Player.position, Color.red);
-                    // Debug.Log("visible");
-                    //c'est ici qu'il le voit
+
+                    // the enemy sees the player
                     InSightRange = true;
 
                 }else{
@@ -82,6 +84,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
         }
     }
 
+    // Distance between the player and enemy
     public void GetDistance()
     {
         Distance = Vector3.Distance(Player.transform.position, transform.position);
@@ -90,6 +93,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
 /*----------------------------Chasing--------------------------------------*/
 
+    // the enemy goes towards the player with a greater speed
     public void Chasing()
     {
         transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, 1.5f * Speed * Time.deltaTime);
@@ -97,6 +101,8 @@ public class EnemyBehaviorV2 : MonoBehaviour
     }
 
 /*----------------------------Attacking--------------------------------------*/
+    
+    // the enemy attacks each TimeBetweenAttack
     public void Attacking()
     { 
         transform.LookAt(Player);
@@ -116,6 +122,8 @@ public class EnemyBehaviorV2 : MonoBehaviour
     }
 
 /*----------------------------Patroling--------------------------------------*/
+    
+    // when the player is not in the range, the enemy goes towards a random point
     public void Patroling()
     {
         if(!SetWalkPoint) SearchWalkPoint();
@@ -126,6 +134,7 @@ public class EnemyBehaviorV2 : MonoBehaviour
 
         DistanceToWalkPoint = Vector3.Distance(transform.position, walkPoint);
 
+        // the enemy finds its new position
         if(DistanceToWalkPoint < 0.5)
             SetWalkPoint = false;
     }
@@ -145,10 +154,11 @@ public class EnemyBehaviorV2 : MonoBehaviour
     {
         HealthBar.fillAmount = health / MAX_HEALTH;
 
-        // they died
+        // it died
         if(health < 0) Destroy(gameObject);
     }
 
+    // collision between a bullet and the enemy
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("bulletPlayer")){

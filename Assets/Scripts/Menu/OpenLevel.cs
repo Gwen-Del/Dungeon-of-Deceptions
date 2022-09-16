@@ -14,4 +14,10 @@ public class OpenLevel : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
+
+    // Quit the application
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

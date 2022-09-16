@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
          UpdateHealth();
 
+        // controls of the player
         if (characterController.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
@@ -39,12 +40,14 @@ public class PlayerMovement : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         characterController.Move(moveDirection * Time.deltaTime);
 
+        // the player attacks by pressing space
         if (Input.GetButton("Fire1"))
         {
             Attack();
         }
     }
 
+    // update the health, if 0 then they loose
     public void UpdateHealth()
     {
         HealthBar.fillAmount = health / MAX_HEALTH;
@@ -54,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // attack by shooting a bullet
     public void Attack()
     {
         if(!AlreadyAttacked){
@@ -71,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         AlreadyAttacked = false;
     }
 
+    // collision between a bullet and the player
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("bulletEnemy")){
