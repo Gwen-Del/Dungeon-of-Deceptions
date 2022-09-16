@@ -725,7 +725,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -770,10 +770,9 @@ MonoBehaviour:
   HealthBar: {fileID: 985921233191302378}
   Bullet: {fileID: 1035034092905783240, guid: 38bc2725daa03494eb674174d6d9d5d0, type: 3}
   speed: 6
-  jumpSpeed: 8
   gravity: 20
   health: 10
-  TimeBetweenAttack: 2
+  TimeBetweenAttack: 1
   AlreadyAttacked: 0
 --- !u!1 &8017575774193098528
 GameObject:

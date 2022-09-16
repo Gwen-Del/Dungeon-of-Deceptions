@@ -58,9 +58,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!AlreadyAttacked){
 
-            Rigidbody rb = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            Transform rb = Instantiate(Bullet, transform.position+(transform.forward*1.5f), Quaternion.identity).transform;
+            rb.Rotate(transform.localRotation.eulerAngles);
 
             AlreadyAttacked = true;
             Invoke(nameof(ResetAttack), TimeBetweenAttack);
@@ -76,7 +75,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.CompareTag("bulletEnemy")){
             health -= 0.5f;
-            // Destroy(other.GetComponent<GameObject>());
+            Destroy(other);
+            Debug.Log("player");
         }
     }
 }

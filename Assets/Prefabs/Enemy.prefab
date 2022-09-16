@@ -174,7 +174,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2011198690117583777
 MonoBehaviour:
@@ -193,7 +193,7 @@ MonoBehaviour:
   Bullet: {fileID: 1035034092905783240, guid: f5b7bfc6839eb4c4cb5a349075b6905a, type: 3}
   Speed: 1.5
   Distance: 0
-  CloseDistance: 0.5
+  CloseDistance: 0.8
   DistanceToWalkPoint: 0
   SightRange: 12
   AttackRange: 2
@@ -206,7 +206,7 @@ MonoBehaviour:
   SetWalkPoint: 0
   walkPointRange: 10
   AlreadyAttacked: 0
-  TimeBetweenAttack: 3
+  TimeBetweenAttack: 1.5
 --- !u!1 &5234865140269310754
 GameObject:
   m_ObjectHideFlags: 0

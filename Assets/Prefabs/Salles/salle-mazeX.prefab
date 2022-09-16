@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6287946138710537744}
   m_Layer: 0
   m_Name: BlockDown
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 1055640663812511141}
   m_Layer: 0
   m_Name: BlockLeft
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 4200103405269930128}
   m_Layer: 0
   m_Name: BlockRight
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 8380728329467636131}
   m_Layer: 0
   m_Name: BlockUp
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
